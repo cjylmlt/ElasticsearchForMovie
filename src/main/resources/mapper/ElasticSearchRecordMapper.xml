@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="mapper.ElasticSearchRecordMapper">
+    <select id="getElasticSearchRecord" resultMap="ElasticSearchRecordResultMap">
+        select username,reply,content,user_record.date,userId from user_record limit #{start},#{num}
+    </select>
+    <resultMap type="data.ElasticSearchRecord" id="ElasticSearchRecordResultMap">
+        <result javaType="java.lang.String" property="ownerId" column="username" />
+        <result javaType="java.lang.String" property="receivedMessage" column="content" />
+        <result javaType="java.util.Date" property="messageTime" column="date" />
+        <result javaType="java.lang.String" property="sentMessage" column="reply" />
+    </resultMap>
+</mapper>

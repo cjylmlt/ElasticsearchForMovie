@@ -1,0 +1,6 @@
+client\ElasticSearchClient$2.class
+client\ElasticSearchClient.class
+client\ElasticSearchClient$1.class
+util\MessageUtil.class
+data\ElasticSearchRecord.class
+mapper\ElasticSearchRecordMapper.class
